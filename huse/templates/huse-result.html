@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HUSE Color Extractor</title>
+</head>
+<body>
+  <h1>HUSE Color Extractor</h1>
+  <table border=1 cellspacing=0 cellpadding=2>
+  <tr><th>Code</th><th>Count</th></tr>
+  {% for code, count in values %}
+  <tr><td>{{ code }}</td><td>{{ count }}</td></tr>
+  {% endfor %}
+  </table>
+</body>
+</html>
