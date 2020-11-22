@@ -1,15 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-COmpatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HUSE Color Extractor</title>
+  <link rel='stylesheet' href='/static/css/styles.css'>
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
 </head>
-<body>
-  <h1>HUSE Color Extractor</h1>
-  <table border=1 cellspacing=0 cellpadding=2>
-  <tr><th>Code</th><th>Count</th></tr>
-  {% for code, count in values %}
-  <tr><td>{{ code }}</td><td>{{ count }}</td></tr>
-  {% endfor %}
-  </table>
+<body class="bg-gray-100 text-gray-900">
+  <main class="mt-24 max-w-sm mx-auto">
+    <h1 class="mb-2 text-3xl text-center">HUSE Color Extractor</h1>
+    <div class="rounded overflow-hidden shadow border border-gray-500">
+      <table class="table-auto w-full divide-y divide-gray-500">
+        <thead>
+          <tr>
+            <th>
+              Code
+            </th>
+            <th>
+              Count
+            </th>
+          </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-500">
+          {% for code, count in values %}
+          <tr>
+            <td class="text-center">
+              {{ code }}
+            </td>
+            <td class="text-center">
+              {{ count }}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>  
+      </table>
+    </div>
+  </main>
 </body>
 </html>

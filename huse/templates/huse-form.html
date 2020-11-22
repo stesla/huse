@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-COmpatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HUSE Color Extractor</title>
+  <link rel='stylesheet' href='/static/css/styles.css'>
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
 </head>
-<body>
-  <h1>HUSE Color Extractor</title>
-  <form method="POST">
-    <textarea cols="80" rows="25" name="text"></textarea>
-    <br/>
-    <input type="submit" name="Submit"/>
-  </form>
+<body class="bg-gray-100 text-gray-900">
+  <main class="mt-24 max-w-2xl mx-auto">
+    <h1 class="mb-2 text-3xl text-center">HUSE Color Extractor</h1>
+    <form method="POST" class="flex flex-col items-center">
+      <textarea cols="80" rows="20" name="text"
+        class="border border-gray-500 rounded shadow">
+      </textarea>
+      <input class="mt-2 px-4 py-2 bg-gray-500 text-gray-100 rounded" type="submit" name="Submit"/>
+    </form>
+  </main>
 </body>
 </html>
