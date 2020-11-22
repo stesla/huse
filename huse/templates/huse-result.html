@@ -37,6 +37,16 @@
         </tbody>  
       </table>
     </div>
+    <div class="flex flex-col items-center">
+      <button class="mt-2 px-4 py-2 bg-gray-500 text-gray-100 rounded text-center"
+              data-clipboard-text="{{ mucode }}">
+        Copy code to clipboard
+      </button>
+    </div>
   </main>
+  <script src="/static/js/clipboard.min.js"></script>
+  <script>
+    new ClipboardJS('[data-clipboard-text]');
+  </script>
 </body>
 </html>
