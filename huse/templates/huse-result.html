@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-COmpatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HUSE Color Extractor</title>
-  <link rel='stylesheet' href='/static/css/styles.css'>
-  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
-</head>
-<body class="bg-gray-100 text-gray-900">
+{% extends 'base.html' %}
+
+{% block content %}
   <main class="mt-24 max-w-sm mx-auto">
     <h1 class="mb-2 text-3xl text-center">HUSE Color Extractor</h1>
     <div class="rounded overflow-hidden shadow border border-gray-500">
@@ -53,5 +45,4 @@
   <script>
     new ClipboardJS('[data-clipboard-text]');
   </script>
-</body>
-</html>
+{% endblock %}
