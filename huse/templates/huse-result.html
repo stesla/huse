@@ -1,44 +1,24 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <main class="mt-24 container max-w-5xl mx-auto flex flex-col items-center">
+  <main class="mt-10 container max-w-5xl mx-auto flex flex-col items-center">
     <h1 class="mb-2 text-3xl text-center">HUSE Color Extractor</h1>
     <div class="m-4 py-2 px-4 w-full bg-black whitespace-pre font-mono">{{ html | safe }}</div>
-    <div class="w-full rounded overflow-hidden shadow border border-gray-500">
-      <table class="table-auto w-full divide-y divide-gray-500">
-        <thead>
-          <tr>
-            <th>
-              Color
-            </th>
-            <th>
-              Code
-            </th>
-            <th>
-              Count
-            </th>
-          </tr>
-        </thead>
-        <tbody class="bg-white divide-y divide-gray-500">
-          {% for color, code, count in values %}
-          <tr>
-            <td style="background-color: {{ color }}" title="{{ color }}">
-            </td>
-            <td class="text-center">
-              {{ code }}
-            </td>
-            <td class="text-center">
-              {{ count }}
-            </td>
-          </tr>
-          {% endfor %}
-        </tbody>  
-      </table>
+    <div class="grid grid-cols-5 gap-5">
+      {% for color, code, count in values %}
+      <div class="w-40 rounded shadow border overflow-hidden border-gray-500 flex">
+        <span class="w-12 h-12" style="background-color: {{ color }}" title="{{ color }}"></span>
+        <div class="px-4 w-full flex justify-between items-center">
+          <span class="font-mono mx-2">{{ code }}</span>
+          <span class="font-semibold">{{ count }}</span>
+        </div>
+      </div>
+      {% endfor %}
     </div>
     <div class="flex flex-col items-center">
-      <button class="mt-2 px-4 py-2 bg-gray-500 text-gray-100 rounded text-center"
+      <button class="mt-4 px-4 py-2 bg-gray-500 text-gray-100 rounded text-center"
               data-clipboard-text="{{ mucode }}">
-        Copy code to clipboard
+        Copy colors to clipboard
       </button>
     </div>
   </main>
