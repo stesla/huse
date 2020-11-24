@@ -3,7 +3,7 @@
 {% block content %}
   <main class="mt-10 container max-w-5xl mx-auto flex flex-col items-center">
     <h1 class="mb-2 text-3xl text-center">HUSE Color Extractor</h1>
-    <div class="m-4 py-2 px-4 w-full bg-black whitespace-pre font-mono">{{ html | safe }}</div>
+    <div class="m-4 py-2 px-4 w-full bg-black whitespace-pre-wrap break-words font-mono">{{ html | safe }}</div>
     <div class="grid grid-cols-5 gap-5">
       {% for color, code, count in values %}
       <div class="w-40 rounded shadow border overflow-hidden border-gray-500 flex">
