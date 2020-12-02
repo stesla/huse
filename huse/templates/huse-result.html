@@ -7,7 +7,7 @@
     <div class="grid grid-cols-5 gap-5">
       {% for color, code, count in values %}
       <div class="w-40 rounded shadow border overflow-hidden border-gray-500 flex">
-        <span class="w-12 h-12" style="background-color: {{ color }}" title="{{ color }}"></span>
+        <span class="block py-3 w-12 h-12 bg-black text-center" style="color: {{ color }}" title="{{ color }}">@</span>
         <div class="px-4 w-full flex justify-between items-center">
           <span class="font-mono mx-2">{{ code }}</span>
           <span class="font-semibold">{{ count }}</span>
