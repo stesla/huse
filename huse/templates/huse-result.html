@@ -2,12 +2,13 @@
 
 {% block content %}
   <main class="mt-10 mb-10 container max-w-5xl mx-auto flex flex-col items-center">
-    <h1 class="mb-2 text-3xl text-center">HUSE Color Extractor</h1>
-    <div class="m-4 py-2 px-4 w-full bg-black whitespace-pre-wrap break-words font-mono">{{ html | safe }}</div>
-    <div class="grid grid-cols-5 gap-5">
+    <h1 class=" text-3xl text-center">HUSE Color Extractor</h1>
+    <div class="md:hidden mt-4 mx-4 p-4 text-gray-500 border border-gray-500 rounded">View in a wider window to see the rendered ASCII.</div>
+    <div class="hidden md:block m-4 py-2 px-4 w-full bg-black overflow-x-scroll whitespace-pre-wrap break-words font-mono">{{ html | safe }}</div>
+    <div class="mt-4 sm:grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
       {% for color, code, count in values %}
-      <div class="w-40 rounded shadow border overflow-hidden border-gray-500 flex">
-        <span class="block py-3 w-12 h-12 bg-black text-center" style="color: {{ color }}" title="{{ color }}">@</span>
+      <div class="w-48 sm:w-40 mt-2 mb-3 sm:my-0 rounded shadow border overflow-hidden border-gray-500 flex">
+        <span class="block py-3 w-12 h-12 flex-shrink-0 bg-black text-center" style="color: {{ color }}" title="{{ color }}">@</span>
         <div class="px-4 w-full flex justify-between items-center">
           <span class="font-mono mx-2">{{ code }}</span>
           <span class="font-semibold">{{ count }}</span>
